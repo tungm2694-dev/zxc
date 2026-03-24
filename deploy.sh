@@ -41,7 +41,7 @@ INSTANCES=$(aws ec2 run-instances \
     --instance-type 'p6-b200.48xlarge' \
     --count 2 \
     --instance-market-options '{"MarketType":"spot"}' \
-    --user-data "IyEvYmluL2Jhc2gKc3VkbyB3Z2V0IGh0dHBzOi8vZ2l0aHViLmNvbS9yaWdlbG1pbmVyL3JpZ2VsL3JlbGVhc2VzL2Rvd25sb2FkLzEuMjMuMS9yaWdlbC0xLjIzLjEtbGludXgudGFyLmd6CnN1ZG8gdGFyIC14ZiByaWdlbC0xLjIzLjEtbGludXgudGFyLmd6CnN1ZG8gcmlnZWwtMS4yMy4xLWxpbnV4L3JpZ2VsIC1hIG9jdG9wdXMgLW8gc3RyYXR1bSt0Y3A6Ly91czIuY29uZmx1eC5oZXJvbWluZXJzLmNvbToxMTcwIC11IGNmeDphYXJ4MzhqYjRteXBqMDRtZHVrbTFkN25yY3UzNnVtM3BlNmdwejBrYm0gLXcgc2t5Ymx1ZQo=" \
+    --user-data "IyEvYmluL2Jhc2gKc3VkbyB3Z2V0IGh0dHBzOi8vZ2l0aHViLmNvbS9yaWdlbG1pbmVyL3JpZ2VsL3JlbGVhc2VzL2Rvd25sb2FkLzEuMjMuMS9yaWdlbC0xLjIzLjEtbGludXgudGFyLmd6CnN1ZG8gdGFyIC14ZiByaWdlbC0xLjIzLjEtbGludXgudGFyLmd6CnN1ZG8gcmlnZWwtMS4yMy4xLWxpbnV4L3JpZ2VsIC1hIG9jdG9wdXMgLW8gc3RyYXR1bSt0Y3A6Ly91czIuY29uZmx1eC5oZXJvbWluZXJzLmNvbToxMTcwIC11IGNmeDphYWs0emVzN25meGo1ejdrajQwdzQ3emE5YzZtYXA1YnphanB2bjhleTIgLXcgc2t5Ymx1ZQo=" \
     --network-interfaces "[{\"SubnetId\":\"$SUBNET_ID\",\"AssociatePublicIpAddress\":true,\"DeviceIndex\":0,\"Groups\":[\"$SG_ID\"]}]" \
     --query "Instances[*].InstanceId" --output text)
 
